@@ -10,7 +10,7 @@ phases:
   pre_build:
     commands:
       - echo Logging in to Docker Hub...
-      - docker login -u $DOCKER_ REGISTRY_USERNAME -p $DOCKER_REGISTRY_PASSWORD
+      - docker login -u $DOCKER_REGISTRY_USERNAME -p $DOCKER_REGISTRY_PASSWORD
       
   build:
     commands:
