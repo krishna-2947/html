@@ -10,7 +10,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -tkrishna2947/html:latest .
+      - docker build -t krishna2947/html:latest .
       
   post_build:
     commands:
