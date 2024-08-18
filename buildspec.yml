@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Docker Hub...
+      - docker login -u krishnakanth2947@gmail.com -p Lamborghini@2
+      
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - docker build -t krishnakanth2947@gmail.com/my-html-app:latest .
+      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo Pushing the Docker image to Docker Hub...
+      - docker push krishnakanth2947@gmail.com/my-html-app:latest
+
+artifacts:
+  files:
+    - '**/*'
