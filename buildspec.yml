@@ -10,13 +10,13 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - docker build -t krishna2947/html . || exit 1
+      - docker build -t krishna2947/html:latest .
       
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image to Docker Hub...
-      - docker push krishna2947/html || exit 1
+      - docker push krishna2947/html:latest
 
 artifacts:
   files:
