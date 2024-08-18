@@ -1,10 +1,16 @@
 version: 0.2
 
+env:
+  parameter-store:
+    DOCKER_REGISTRY_USERNAME: /CodeBuild/DOCKERHUB_USERNAME
+    DOCKER_REGISTRY_PASSWORD: /CodeBuild/DOCKERHUB_PASSWORD
+
+
 phases:
   pre_build:
     commands:
       - echo Logging in to Docker Hub...
-      - docker login -u $DOCKERHUB_USERNAME -p $DOCKERHUB_PASSWORD
+      - docker login -u $DOCKER_ REGISTRY_USERNAME -p $DOCKER_REGISTRY_PASSWORD
       
   build:
     commands:
